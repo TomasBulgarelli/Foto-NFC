@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Importante para que la página se adapte a dispositivos móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foto del Día</title>
+  <style>
+    /* Estilos para centrar la imagen y que se ajuste a la pantalla */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Aquí se mostrará la foto aleatoria -->
+  <img id="fotoRandom" src="" alt="Foto del Día">
+  <script>
+    // Array con las URLs directas de tus imágenes
+    const fotos = [
+      "https://imgur.com/S6pYnQU",
+      "https://imgur.com/yODas7n",
+      "https://imgur.com/y7vVQZ4",
+      "https://imgur.com/aJxkqmE",
+      "https://imgur.com/0oJEpsF",
+      "https://imgur.com/aCmufm4",
+      "https://imgur.com/izOjPmM",
+      "https://imgur.com/IdLowrn",
+      "https://imgur.com/UHIPn1G",
+      "https://imgur.com/uTcKv88"
+      
+      // Agrega aquí todas las URLs que necesites
+    ];
+    // Calcula un índice aleatorio basado en el número de fotos
+    const indiceAleatorio = Math.floor(Math.random() * fotos.length);
+    // Asigna la URL aleatoria al atributo src de la imagen
+    document.getElementById('fotoRandom').src = fotos[indiceAleatorio];
+  </script>
+</body>
+</html>
